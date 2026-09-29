@@ -28,14 +28,16 @@ class ScreenCaptureManager(private val context: Context) {
 
         mediaProjection = projection
 
-        projectionCallback = object : MediaProjection.Callback() {
+        val callback = object : MediaProjection.Callback() {
             override fun onStop() {
                 stop()
             }
         }
 
+        projectionCallback = callback
+
         mediaProjection?.registerCallback(
-            projectionCallback,
+            callback,
             Handler(Looper.getMainLooper())
         )
 
