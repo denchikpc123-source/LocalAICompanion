@@ -199,6 +199,9 @@ fun ChatScreen() {
                                     val jsonHistory = JSONArray()
 
                                     CompanionEngine.chatHistory.value
+                                        .filter { message ->
+                                            message.role == "user" || message.role == "assistant"
+                                        }
                                         .dropLast(1)
                                         .forEach { message ->
                                             jsonHistory.put(
