@@ -1,4 +1,3 @@
-```kotlin
 package com.localai.companion.ui
 
 import android.content.Intent
@@ -815,4 +814,3 @@ fun SettingsScreen() {
         }
     }
 }
-```
