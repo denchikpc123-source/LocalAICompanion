@@ -1,4 +1,3 @@
-```kotlin
 package com.localai.companion.ui
 
 import androidx.compose.animation.animateColorAsState
@@ -79,4 +78,3 @@ fun LiveOrb(state: AppState) {
         )
     }
 }
-```
