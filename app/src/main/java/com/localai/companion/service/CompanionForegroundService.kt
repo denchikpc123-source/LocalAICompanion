@@ -329,6 +329,9 @@ class CompanionForegroundService : LifecycleService() {
                 val history = JSONArray()
 
                 CompanionEngine.chatHistory.value
+                    .filter { message ->
+                        message.role == "user" || message.role == "assistant"
+                    }
                     .dropLast(1)
                     .forEach { message ->
 
